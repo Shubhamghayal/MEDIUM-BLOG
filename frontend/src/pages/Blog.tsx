@@ -23,7 +23,11 @@ export const Blog=()=>{
       </div>
       </div>
     }
-    return <div>
-        <FullBlog blog={blog} />
-    </div>
+    return   <div>
+    {blog ? (
+      <FullBlog blog={blog} />
+    ) : (
+      <div>Blog not found</div> // Handle case when blog is undefined
+    )}
+  </div>
 }
